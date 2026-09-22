@@ -1,1 +1,17 @@
-placeholder-will-replace
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>BOOBIES @ BOBBYS — Partner Brief</title></head><body>
+<script>
+async function go(){
+  const n=10;
+  let s='';
+  for(let i=0;i<n;i++){
+    const t=await fetch('./c'+i+'.txt').then(r=>r.text());
+    s+=t.trim();
+  }
+  const bin=Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+  document.open();
+  document.write(new TextDecoder().decode(bin));
+  document.close();
+}
+go();
+</script><p style="font-family:system-ui;color:#b9a3d4;background:#0a0612;min-height:100vh;padding:2rem">Loading partner pack…</p>
+</body></html>
